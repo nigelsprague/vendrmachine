@@ -17,7 +17,7 @@
 
 <body>
   <!-- SECTION -->
-  <header>
+  <header class="sticky-top">
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
       <a class="navbar-brand" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
@@ -61,19 +61,19 @@
           </div>
         </div>
       </section>
-      <section class="row justify-content-end">
-        <div class="col-3 p-3 bg-dark text-light text-center">
-          <div>Total Money: <span class="border p-1">$<span id="money">0.00</span></span></div>
-        </div>
-      </section>
+      <div class="sticky-bottom">
+
+        <section class="row justify-content-end">
+          <div class="col-3 p-3 bg-dark text-light text-center">
+            <div>Total Money: <span class="border p-1">$<span id="money">0.00</span></span></div>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 
   <!-- SECTION -->
-  <footer id="pantry" class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-    </div>
+  <footer id="pantry" class="bg-dark text-light row m-0">
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -13,6 +13,7 @@ class SnacksService {
       return
     }
     AppState.money -= snackToBuy.price
+    AppState.pantry.push(snackToBuy)
   }
 }
 

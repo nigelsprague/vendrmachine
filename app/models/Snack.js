@@ -17,10 +17,18 @@ export class Snack {
                   <h5 class="card-title">${this.name}</h5>
                   <p class="card-text">$${this.price}</p>
                 </div>
-                <button onclick="app.SnacksController.buySnack(${this.name})" class="col-4 btn bg-success text-light fs-5">Buy</button>
+                <button onclick="app.SnacksController.buySnack('${this.name}')" class="col-4 btn bg-success text-light fs-5">Buy</button>
               </div>
             </div>
           </div>
         </div>`
+  }
+
+  get pantryHTMLTemplate() {
+    return `
+      <div class="col-1 p-1">
+        <img src="${this.imgUrl}"
+          class="card-img-top" alt="snack"></img>
+      </div>`
   }
 }

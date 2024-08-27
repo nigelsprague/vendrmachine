@@ -22,6 +22,7 @@ export class SnacksController {
 
   buySnack(snackName) {
     snacksService.buySnack(snackName)
+    this.drawPantry()
   }
 
   drawSnacks() {
@@ -30,5 +31,13 @@ export class SnacksController {
     snacks.forEach(snack => snacksHTML += snack.SnackHTMLTemplate)
     const snacksElem = document.getElementById('venderSnacks')
     snacksElem.innerHTML = snacksHTML
+  }
+
+  drawPantry() {
+    const pantry = AppState.pantry
+    let pantryHTML = ''
+    pantry.forEach(snack => pantryHTML += snack.pantryHTMLTemplate)
+    const pantryElem = document.getElementById('pantry')
+    pantryElem.innerHTML = pantryHTML
   }
 }
